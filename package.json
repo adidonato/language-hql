@@ -6,10 +6,9 @@
     "atom": ">=0.50.0",
     "node": "*"
   },
-  "homepage": "http://github.com/adidonato/language-hql",
   "repository": {
     "type": "git",
-    "url": "https://github.com/adidonato/language-hql/language-hql.git"
+    "url": "https://github.com/adidonato/language-hql"
   },
   "license": "MIT"  
 }
