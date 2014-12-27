@@ -1,0 +1,16 @@
+{
+  "name": "language-hql",
+  "version": "0.1",
+  "description": "HQL language support in Atom",
+  "engines": {
+    "atom": "*",
+    "node": "*"
+  },
+  "homepage": "http://atom.github.io/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adidonato/language-hql/language-hql.git"
+  },
+  "license": "MIT"  
+}
+
