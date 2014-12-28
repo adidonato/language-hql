@@ -1,6 +1,7 @@
 # HQL (Apache Hive query) language support in Atom
 
 * Adds syntax highlighting to HQL files in Atom.
+* Converts HQL grammar to uppercase 
 
 # Adapted from language-sql Atom package, currently contains the following HQL specific syntax.
 
