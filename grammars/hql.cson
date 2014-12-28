@@ -15,7 +15,7 @@
         'name': 'keyword.other.hql'
       '5':
         'name': 'entity.name.function.hql'
-    'match': '(?i:^\\s*(create(?:\\s+or\\s+replace)?)\\s+(aggregate|conversion|database|domain|function|group|(unique\\s+)?index|language|operator class|operator|rule|schema|sequence|table|tablespace|trigger|type|user|view)\\s+)([\'"`]?)(\\w+)\\4'
+    'match': '(?i:^\\s*(create(?:\\s+or\\s+replace)?)\\s+(aggregate|intersect|except|USE|conversion|database|domain|function|group|partition|cluster|(unique\\s+)?index|language|operator class|operator|rule|schema|sequence|table|tablespace|trigger|type|user|view)\\s+)([\'"`]?)(\\w+)\\4'
     'name': 'meta.create.hql'
   }
   {
@@ -24,7 +24,7 @@
         'name': 'keyword.other.create.hql'
       '2':
         'name': 'keyword.other.hql'
-    'match': '(?i:^\\s*(drop)\\s+(aggregate|conversion|database|domain|function|group|index|language|operator class|operator|rule|schema|sequence|table|tablespace|trigger|type|user|view))'
+    'match': '(?i:^\\s*(drop)\\s+(aggregate|conversion|database|domain|function|group|cluster|partition|index|language|operator class|operator|rule|schema|sequence|table|tablespace|trigger|type|user|view))'
     'name': 'meta.drop.hql'
   }
   {
@@ -59,7 +59,7 @@
         'name': 'keyword.other.create.hql'
       '2':
         'name': 'keyword.other.table.hql'
-    'match': '(?i:^\\s*(alter)\\s+(aggregate|conversion|database|domain|function|group|index|language|operator class|operator|rule|schema|sequence|table|tablespace|trigger|type|user|view)\\s+)'
+    'match': '(?i:^\\s*(alter)\\s+(aggregate|conversion|database|domain|intersect|except|USE|function|group|partition|cluster|index|language|operator class|operator|rule|schema|sequence|table|tablespace|trigger|type|user|view)\\s+)'
     'name': 'meta.alter.hql'
   }
   {
@@ -105,7 +105,7 @@
     'name': 'constant.numeric.hql'
   }
   {
-    'match': '(?i:\\b(select(\\s+distinct)?|insert\\s+(ignore\\s+)?into|update|delete|from|set|where|group\\sby|or|like|and|union(\\s+all)?|having|order\\sby|limit|offset|(inner|cross)\\s+join|join|straight_join|(left|right)(\\s+outer)?\\s+join|natural(\\s+(left|right)(\\s+outer)?)?\\s+join)\\b)'
+    'match': '(?i:\\b(select(\\s+distinct)?|insert\\s+(ignore\\s+)?into|update|MAPJOIN|ROLLUP|CUBE|intersect|except|USE|delete|from|set|where|group\\sby|partition\\sby|cluster\\sby|distribute\\sby|or|like|and|union(\\s+all)?|having|order\\sby|limit|offset|(inner|cross)\\s+join|join|straight_join|(left|right)(\\s+outer)?\\s+join|natural(\\s+(left|right)(\\s+outer)?)?\\s+join)\\b)'
     'name': 'keyword.other.DML.hql'
   }
   {
@@ -153,6 +153,10 @@
     'name': 'keyword.operator.comparison.hql'
   }
   {
+    'match': '(?i)\\b(COMMENT|STORED|LOAD|OVERWRITE|LOCATION|IF EXISTS|STREAMTABLE|ROW FORMAT|CLUSTERED|PARTITIONED|BUCKETED)\\b'
+    'name': 'storage.type.hql'	
+  }
+  {
     'match': '-|\\+|/'
     'name': 'keyword.operator.math.hql'
   }
@@ -161,12 +165,10 @@
     'name': 'keyword.operator.concatenator.hql'
   }
   {
-    'comment': 'List of HQL99 built-in functions from http://www.oreilly.com/catalog/hqlnut/chapter/ch04.html'
     'match': '(?i)\\b(CURRENT_(DATE|TIME(STAMP)?|USER)|(SESSION|SYSTEM)_USER)\\b'
     'name': 'support.function.scalar.hql'
   }
   {
-    'comment': 'List of HQL99 built-in functions from http://www.oreilly.com/catalog/hqlnut/chapter/ch04.html'
     'match': '(?i)\\b(AVG|COUNT|MIN|MAX|SUM)(?=\\s*\\()'
     'name': 'support.function.aggregate.hql'
   }
