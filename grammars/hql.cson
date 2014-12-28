@@ -105,7 +105,7 @@
     'name': 'constant.numeric.hql'
   }
   {
-    'match': '(?i:\\b(select(\\s+distinct)?|insert\\s+(ignore\\s+)?into|update|MAPJOIN|ROLLUP|CUBE|intersect|except|USE|delete|from|set|where|group\\sby|partition\\sby|cluster\\sby|distribute\\sby|or|like|and|union(\\s+all)?|having|order\\sby|limit|offset|(inner|cross)\\s+join|join|straight_join|(left|right)(\\s+outer)?\\s+join|natural(\\s+(left|right)(\\s+outer)?)?\\s+join)\\b)'
+    'match': '(?i:\\b(select(\\s+distinct)?|insert\\s+(ignore\\s+)?into|update|MAPJOIN|ROLLUP|CUBE|cast|intersect|except|between|to_date|from_unixtime|unix_timestamp|year|hour|month|day|dayofmonth|minute|second|weekofyear|datediff|date_add|date_sub|from_utc_timestamp|to_utc_timestamp|IF|USE|delete|from|set|where|group\\sby|partition\\sby|cluster\\sby|distribute\\sby|or|like|and|union(\\s+all)?|having|order\\sby|limit|offset|(inner|cross)\\s+join|join|straight_join|(left|right)(\\s+outer)?\\s+join|natural(\\s+(left|right)(\\s+outer)?)?\\s+join)\\b)'
     'name': 'keyword.other.DML.hql'
   }
   {
@@ -153,7 +153,7 @@
     'name': 'keyword.operator.comparison.hql'
   }
   {
-    'match': '(?i)\\b(COMMENT|STORED|LOAD|OVERWRITE|LOCATION|IF EXISTS|STREAMTABLE|ROW FORMAT|CLUSTERED|PARTITIONED|BUCKETED)\\b'
+    'match': '(?i)\\b(COMMENT|STORED|LOAD|OVERWRITE|LOCATION|IF EXISTS|STREAMTABLE|ROW FORMAT|COALESCE|CLUSTERED|PARTITIONED|BUCKETED)\\b'
     'name': 'storage.type.hql'	
   }
   {
@@ -169,11 +169,11 @@
     'name': 'support.function.scalar.hql'
   }
   {
-    'match': '(?i)\\b(AVG|COUNT|MIN|MAX|SUM)(?=\\s*\\()'
+    'match': '(?i)\\b(AVG|COUNT|MIN|MAX|SUM|DISTINCT|VARIANCE|var_pop|var_samp|stddev_pop|stddev_samp|covar_pop|covar_samp|corr|percentile|percentile_approx|histogram_numeric|collect_set|collect_list|ntile)(?=\\s*\\()'
     'name': 'support.function.aggregate.hql'
   }
   {
-    'match': '(?i)\\b(CONCATENATE|CONVERT|LOWER|SUBSTRING|TRANSLATE|TRIM|UPPER)\\b'
+    'match': '(?i)\\b(CONCATENATE|CONVERT|LOWER|SUBSTRING|TRANSLATE|TRIM|UPPER|ascii|base64|concat|context_ngrams|concat_ws|decode|encode|find_in_set|format_number|get_json_object|in_file|instr|lenght|locate|lower|lpad|ltrim|ngrams|parse_url|printf|regexp_extract|regexp_replace|repeat|reverse|rpad|rtrim|sentences|space|split|str_to_map|substr|translate|trim|unbase64|upper)\\b'
     'name': 'support.function.string.hql'
   }
   {
