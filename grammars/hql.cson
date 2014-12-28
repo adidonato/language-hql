@@ -5,7 +5,7 @@
 ]
 'patterns': [
   {
-    'include': '--comments'
+    'include': '#comments'
   }
   {
     'captures':
@@ -24,7 +24,7 @@
         'name': 'keyword.other.create.hql'
       '2':
         'name': 'keyword.other.hql'
-    'match': '(?i:^\\s*(drop)\\s+(aggregate|conversion|database|domain|function|group|cluster|partition|index|language|operator class|operator|rule|schema|sequence|table|tablespace|trigger|type|user|view))'
+    'match': '(?i:^\\s*(drop)\\s+(aggregate|conversion|database|domain|function|group|cluster|partition|index|language|operator class|operator|rule|schema|sequence|table|IF|EXISTS|tablespace|trigger|type|user|view))'
     'name': 'meta.drop.hql'
   }
   {
@@ -153,8 +153,8 @@
     'name': 'keyword.operator.comparison.hql'
   }
   {
-    'match': '(?i)\\b(COMMENT|STORED|LOAD|OVERWRITE|LOCATION|IF EXISTS|STREAMTABLE|ROW FORMAT|COALESCE|CLUSTERED|PARTITIONED|BUCKETED)\\b'
-    'name': 'storage.type.hql'	
+    'match': '(?i)\\b(COMMENT|STORED|LOAD|OVERWRITE|LOCATION|STREAMTABLE|ROW FORMAT|COALESCE|CLUSTERED|PARTITIONED|BUCKETED)\\b'
+    'name': 'storage.type.II.hql'
   }
   {
     'match': '-|\\+|/'
@@ -382,4 +382,4 @@
           }
         ]
       }
-    ]
+   ] 
