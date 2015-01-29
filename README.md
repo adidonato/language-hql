@@ -1,5 +1,6 @@
 # HQL (Apache Hive query) language support in Atom
 
+* Uppercasing Works until version 0.165.0 
 * Adds syntax highlighting to HQL files in Atom.
 * Converts HQL grammar to uppercase 
 
