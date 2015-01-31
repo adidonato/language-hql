@@ -1,6 +1,6 @@
 # HQL (Apache Hive query) language support in Atom
 
-See[hive language manual UDF](https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF) and [hive language manual DDL]( https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DDL) for more information on the language.
+See [hive language manual UDF](https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF) and [hive language manual DDL]( https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DDL) for more information on the language.
 
 * Adds syntax highlighting to HQL files in Atom.
 * Converts HQL grammar to uppercase
