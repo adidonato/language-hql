@@ -15,7 +15,8 @@
         'name': 'keyword.other.hql'
       '5':
         'name': 'entity.name.function.hql'
-    'match': '(?i:^\\s*(create(?:\\s+or\\s+replace)?)\\s+(aggregate|intersect|except|USE|conversion|database|domain|function|group|partition|cluster|(unique\\s+)?index|language|operator class|operator|rule|schema|sequence|table|tablespace|trigger|type|user|view)\\s+)([\'"`]?)(\\w+)\\4'
+    'match': '(?i:^\\s*(create(?:\\s+or\\s+replace)?)\\s+(aggregate|intersect|except|USE|conversion|database|domain|function|group|partition|cluster|(unique\\s+)?index|language|operator\\s+class|operator|rule|schema|sequence|table|tablespace|trigger|type|user|view)\\s+)'
+    # ([\'"`]?)(\\w+)\\4'
     'name': 'meta.create.hql'
   }
   {
@@ -24,8 +25,17 @@
         'name': 'keyword.other.create.hql'
       '2':
         'name': 'keyword.other.hql'
-    'match': '(?i:^\\s*(drop)\\s+(aggregate|conversion|database|domain|function|group|cluster|partition|index|language|operator class|operator|rule|schema|sequence|table|IF|EXISTS|tablespace|trigger|type|user|view))'
+    'match': '(?i:^\\s*(drop)\\s+(aggregate|conversion|database|domain|function|group|cluster|partition|index|language|operator class|operator|rule|schema|sequence|table|tablespace|trigger|type|user|view))'
     'name': 'meta.drop.hql'
+  }
+  {
+    'captures':
+      '1':
+        'name': 'keyword.other.create.hql'
+      '2':
+        'name': 'keyword.other.hql'
+    'match': '(?i:^\\s*(create)\\s+(aggregate|conversion|database|domain|function|group|cluster|partition|index|language|operator class|operator|rule|schema|sequence|table|tablespace|trigger|type|user|view))'
+    'name': 'meta.create.hql'
   }
   {
     'captures':
@@ -105,11 +115,15 @@
     'name': 'constant.numeric.hql'
   }
   {
-    'match': '(?i:\\b(select(\\s+distinct)?|insert\\s+(ignore\\s+)?into|update|MAPJOIN|ROLLUP|CUBE|cast|intersect|except|between|to_date|from_unixtime|unix_timestamp|year|hour|month|day|dayofmonth|minute|second|weekofyear|datediff|date_add|date_sub|from_utc_timestamp|to_utc_timestamp|IF|USE|delete|from|set|where|group\\sby|partition\\sby|cluster\\sby|distribute\\sby|or|like|and|union(\\s+all)?|having|order\\sby|limit|offset|(inner|cross)\\s+join|join|straight_join|(left|right)(\\s+outer)?\\s+join|natural(\\s+(left|right)(\\s+outer)?)?\\s+join)\\b)'
+    'match': '(?i:\\b(select(\\s+distinct)?|insert\\s+(ignore\\s+)?into|update|MAPJOIN|ROLLUP|CUBE|cast|intersect|except|between|to_date|from_unixtime|unix_timestamp|year|hour|month|day|dayofmonth|minute|second|weekofyear|datediff|date_add|date_sub|from_utc_timestamp|to_utc_timestamp|IF|USE|exlode|inline|json_tuple|parse_url_tuple|posexplode|stack|java_method|rename|reflect|hash|xpath|get_json_object|size|map_keys|map_values|array_contains|sort_array|delete|from|set|where|group\\sby|partition\\sby|cluster\\sby|distribute\\sby|or|like|and|union(\\s+all)?|having|order\\sby|limit|offset|(inner|cross)\\s+join|join|straight_join|(left|right)(\\s+outer)?\\s+join|natural(\\s+(left|right)(\\s+outer)?)?\\s+join)\\b)'
     'name': 'keyword.other.DML.hql'
   }
   {
-    'match': '(?i:\\b(on|((is\\s+)?not\\s+)?null)\\b)'
+    'match': '(?i:\\b(rename\\s+)?to\\b)'
+    'name': 'keyword.other.DML.hql'
+  }
+  {
+    'match': '(?i:\\b(on|((is\\s+)not\\s+)?null)\\b)'
     'name': 'keyword.other.DDL.create.II.hql'
   }
   {
@@ -153,7 +167,7 @@
     'name': 'keyword.operator.comparison.hql'
   }
   {
-    'match': '(?i)\\b(COMMENT|STORED|LOAD|OVERWRITE|LOCATION|STREAMTABLE|ROW FORMAT|COALESCE|CLUSTERED|PARTITIONED|BUCKETED)\\b'
+    'match': '(?i)\\b(COMMENT|STORED|LOAD|rlike|regexp|map|struct|named_struct|array|create_union|OVERWRITE|LOCATION|STREAMTABLE|ROW FORMAT|COALESCE|CLUSTERED|PARTITIONED|BUCKETED)\\b'
     'name': 'storage.type.II.hql'
   }
   {
@@ -169,11 +183,11 @@
     'name': 'support.function.scalar.hql'
   }
   {
-    'match': '(?i)\\b(AVG|COUNT|MIN|MAX|SUM|DISTINCT|VARIANCE|var_pop|var_samp|stddev_pop|stddev_samp|covar_pop|covar_samp|corr|percentile|percentile_approx|histogram_numeric|collect_set|collect_list|ntile)(?=\\s*\\()'
-    'name': 'support.function.aggregate.hql'
+    'match': '(?i)\\b(AVG|COUNT|MIN|MAX|SUM|DISTINCT|VARIANCE|var_pop|var_samp|stddev_pop|stddev_samp|covar_pop|covar_samp|corr|percentile|percentile_approx|histogram_numeric|collect_set|collect_list|ntile|round|floor|ceil|rand|exp|ln|log10|log2|log|pow|power|sqrt|bin|hex|unhex|conv|from_base|abs|pmod|sin|asin|cos|acos|tan|atan|degrees|radians|positive|negative|sign|e|pi)(?=\\s*\\()'
+    'name': 'entity.function.name.hql'
   }
   {
-    'match': '(?i)\\b(CONCATENATE|CONVERT|LOWER|SUBSTRING|TRANSLATE|TRIM|UPPER|ascii|base64|concat|context_ngrams|concat_ws|decode|encode|find_in_set|format_number|get_json_object|in_file|instr|lenght|locate|lower|lpad|ltrim|ngrams|parse_url|printf|regexp_extract|regexp_replace|repeat|reverse|rpad|rtrim|sentences|space|split|str_to_map|substr|translate|trim|unbase64|upper)\\b'
+    'match': '(?i)\\b(CONCATENATE|CONVERT|LOWER|SUBSTRING|TRANSLATE|TRIM|UPPER|ascii|base64|concat|context_ngrams|histogram_numeric|concat_ws|decode|encode|find_in_set|format_number|get_json_object|in_file|instr|lenght|locate|lower|lpad|ltrim|ngrams|parse_url|printf|regexp_extract|regexp_replace|repeat|reverse|rpad|rtrim|sentences|space|split|str_to_map|substr|translate|trim|unbase64|upper)\\b'
     'name': 'support.function.string.hql'
   }
   {
@@ -382,4 +396,4 @@
           }
         ]
       }
-   ] 
+   ]

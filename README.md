@@ -1,8 +1,12 @@
 # HQL (Apache Hive query) language support in Atom
 
-* Uppercasing Works until version 0.165.0 
+See[hive language manual UDF](https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF) and [hive language manual DDL]( https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DDL) for more information on the language.
+
 * Adds syntax highlighting to HQL files in Atom.
-* Converts HQL grammar to uppercase 
+* Converts HQL grammar to uppercase
+
+<img src="./img/language-hql-demo.gif" width="650px"/> 
+
 
 # Adapted from language-sql Atom package, currently contains the following HQL specific syntax.
 
@@ -11,12 +15,10 @@
 * Conditional Functions
 * Date Functions
 * Type Conversion Functions
-
-# Coming Soon
-
+* Fixed uppercasing with DOM Shadow support
 * Built-in Table-Generating Functions (UDTF)
 * Misc. Functions (e.g. hash)
-* Custom UDFs
+* Some Custom UDFs
 * Collection Functions
 * Mathematical Functions
 * Relational Operators
@@ -26,4 +28,4 @@
 * Operators on Complex Types
 
 Contributions are greatly appreciated. Please fork this repository and open a
-pull request to add snippets, make grammar tweaks, etc.
+pull request to add snippets, make grammar tweaks, etc...
