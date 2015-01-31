@@ -1,6 +1,6 @@
 {
   "name": "language-hql",
-  "version": "2.0.0",
+  "version": "3.0.0-0",
   "description": "HQL language support in Atom",
   "engines": {
     "atom": ">=0.50.0",
