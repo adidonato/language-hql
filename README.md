@@ -4,6 +4,7 @@ See [hive language manual UDF](https://cwiki.apache.org/confluence/display/Hive/
 
 * Adds syntax highlighting to HQL files in Atom.
 * Converts HQL grammar to uppercase
+* Added AutoComplete Functionality, requires: autocomplete-snippets and autocomplete-plus
 
 <img src="./img/language-hql-demo.gif" width="650px"/> 
 
