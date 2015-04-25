@@ -1,12 +1,14 @@
-# HQL (Apache Hive query) language support in Atom
+# HQL (Apache Hive) query language support in Atom
 
+Works for *Apache Hive* and *Apache Pig* syntax and other SQL-like languages.
 See [hive language manual UDF](https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF) and [hive language manual DDL]( https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DDL) for more information on the language.
 
 * Adds syntax highlighting to HQL files in Atom.
 * Converts HQL grammar to uppercase
-* Added AutoComplete Functionality, requires: autocomplete-snippets and autocomplete-plus
+* Added AutoComplete Functionality, requires: **autocomplete-snippets** and **autocomplete-plus**
+* In order to use the *AutoComplete Functionality* with grammar suggestions/completions, make sure **"Include Completions From All buffers"** is selected in the *Autocomplete Plus* package settings (Atom, Preferences, Packages, autocomplete-plus, Settings on osx) 
 
-<img src="./img/language-hql-demo.gif" width="650px"/> 
+<img src="./img/language-hql-demo.gif" width="650px"/>
 
 
 # Adapted from language-sql Atom package, currently contains the following HQL specific syntax.
