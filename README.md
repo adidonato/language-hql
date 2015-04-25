@@ -6,10 +6,12 @@ See [hive language manual UDF](https://cwiki.apache.org/confluence/display/Hive/
 * Adds syntax highlighting to HQL files in Atom.
 * Converts HQL grammar to uppercase
 * Added AutoComplete Functionality, requires: **autocomplete-snippets** and **autocomplete-plus**
-* In order to use the *AutoComplete Functionality* with grammar suggestions/completions, make sure **"Include Completions From All buffers"** is selected in the *Autocomplete Plus* package settings (Atom, Preferences, Packages, autocomplete-plus, Settings on osx) 
+* In order to use the snippets press `alt+shift+s` which will prompt autocomplete snippets to load the .hql snippets
+* To enable snippets to be suggested and used in for tab completion, copy `~/.atom/packages/language-hql/snippets/language-hql.cson` to `~/.atom/snippets.cson`
 
 <img src="./img/language-hql-demo.gif" width="650px"/>
 
+<img src="./img/language-hql-2.gif" width="650px"/>
 
 # Adapted from language-sql Atom package, currently contains the following HQL specific syntax.
 
