@@ -1,4 +1,4 @@
-# HQL (Apache Hive) query language support in Atom
+# HQL (Apache Hive) query language support in Atom  [![Build Status](https://travis-ci.org/adidonato/language-hql.svg?branch=master)](https://travis-ci.org/adidonato/language-hql)
 
 Works for *Apache Hive* and *Apache Pig* syntax and other SQL-like languages.
 See [hive language manual UDF](https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF) and [hive language manual DDL]( https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DDL) for more information on the language.
