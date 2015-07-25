@@ -1,5 +1,7 @@
 # HQL (Apache Hive) query language support in Atom  [![Build Status](https://travis-ci.org/adidonato/language-hql.svg?branch=master)](https://travis-ci.org/adidonato/language-hql)
 
+### `(((o(*ﾟ▽ﾟ*)o))) New UDfs and Keywords added !`
+
 Works for *Apache Hive* and *Apache Pig* syntax and other SQL-like languages.
 See [hive language manual UDF](https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF) and [hive language manual DDL]( https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DDL) for more information on the language.
 
@@ -23,6 +25,8 @@ See [hive language manual UDF](https://cwiki.apache.org/confluence/display/Hive/
 * Fixed uppercasing with DOM Shadow support
 * Built-in Table-Generating Functions (UDTF)
 * Misc. Functions (e.g. hash)
+* Brickhouse UDFs
+* Some Facebook UDFs
 * Some Custom UDFs
 * Collection Functions
 * Mathematical Functions
@@ -31,6 +35,8 @@ See [hive language manual UDF](https://cwiki.apache.org/confluence/display/Hive/
 * Logical Operators
 * Complex Type Constructors
 * Operators on Complex Types
+
+# Contributing
 
 Contributions are greatly appreciated. Please fork this repository and open a
 pull request to add snippets, make grammar tweaks, etc...
