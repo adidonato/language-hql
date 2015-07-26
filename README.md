@@ -15,6 +15,11 @@ See [hive language manual UDF](https://cwiki.apache.org/confluence/display/Hive/
 
 <img src="./img/language-hql-2.gif" width="650px"/>
 
+# Installation
+
+* From the command line: `apm install language-hql` 
+* From Atom -> Preferences -> Packages -> Search for `language-hql`
+
 # Adapted from language-sql Atom package, currently contains the following HQL specific syntax.
 
 * String Functions
