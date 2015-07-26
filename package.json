@@ -1,6 +1,6 @@
 {
   "name": "language-hql",
-  "version": "3.4.0",
+  "version": "4.0.0",
   "description": "HQL language support in Atom - Apache Hive",
   "engines": {
     "atom": ">=0.50.0",
