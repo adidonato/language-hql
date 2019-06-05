@@ -15,7 +15,7 @@
         'name': 'keyword.other.hql'
       '5':
         'name': 'entity.name.function.hql'
-    'match': '(?i:^\\s*(create(?:\\s+or\\s+replace)?)\\s+(aggregate|intersect|IF\\sNOT\\sEXISTS|except|USE|conversion|database|domain|function|group|partition|cluster|(unique\\s+)?index|language|operator\\s+class|operator|rule|schema|sequence|table|tablespace|trigger|type|user|view)\\s+)'
+    'match': '(?i:^\\s*(create(?:\\s+or\\s+replace)?(?:\\s+external)?)\\s+(aggregate|intersect|IF\\sNOT\\sEXISTS|except|USE|conversion|database|domain|function|group|partition|cluster|(unique\\s+)?index|language|operator\\s+class|operator|rule|schema|sequence|table|tablespace|trigger|type|user|view)\\s+)'
     # ([\'"`]?)(\\w+)\\4'
     'name': 'meta.create.hql'
   }
